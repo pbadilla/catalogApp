@@ -1,8 +1,7 @@
 // ------------------------------------
 // Constants
 
-const REPO_URL =
-  'https://api.github.com/repos/gvaldambrini/react-simple-boilerplate';
+const REPO_URL = 'https://api.github.com/repos/gvaldambrini/react-simple-boilerplate';
 
 const CONTRIBUTORS_FETCH_SUCCESS = 'about/CONTRIBUTORS_FETCH_SUCCESS';
 const CONTRIBUTORS_FETCH_FAILURE = 'about/CONTRIBUTORS_FETCH_FAILURE';
@@ -13,14 +12,14 @@ const CONTRIBUTORS_FETCH_FAILURE = 'about/CONTRIBUTORS_FETCH_FAILURE';
 function fetchContributorsSuccess(contributors) {
   return {
     type: CONTRIBUTORS_FETCH_SUCCESS,
-    payload: contributors
+    payload: contributors,
   };
 }
 
 function fetchContributorsFailure(errmessage) {
   return {
     type: CONTRIBUTORS_FETCH_FAILURE,
-    payload: errmessage
+    payload: errmessage,
   };
 }
 
@@ -51,7 +50,7 @@ export const contributorsLoaded = state => state.about.loaded;
 
 const initialState = {
   contributors: [],
-  loaded: false
+  loaded: false,
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -63,14 +62,14 @@ export default function reducer(state = initialState, action = {}) {
           username: el.login,
           contributions: el.contributions,
           avatar: el.avatar_url,
-          url: el.html_url
+          url: el.html_url,
         })),
-        loaded: true
+        loaded: true,
       };
     case CONTRIBUTORS_FETCH_FAILURE:
       return {
         ...state,
-        loaded: true
+        loaded: true,
       };
 
     default:
@@ -84,5 +83,5 @@ export default function reducer(state = initialState, action = {}) {
 export const testing = {
   repo_url: REPO_URL,
   fetchContributorsSuccess,
-  fetchContributorsFailure
+  fetchContributorsFailure,
 };

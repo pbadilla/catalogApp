@@ -15,13 +15,11 @@ const About = props => {
 
   const contributors = props.contributors.map(el => (
     <div key={el.username} className={styles.contributor}>
-      <img src={el.avatar} alt='' />
+      <img src={el.avatar} alt="" />
       <div>
         <a href={el.url}>{el.username}</a>
         <div className={styles.commits}>
-          {el.contributions > 1
-            ? `${el.contributions} commits`
-            : `${el.contributions} commit`}
+          {el.contributions > 1 ? `${el.contributions} commits` : `${el.contributions} commit`}
         </div>
       </div>
     </div>
@@ -38,7 +36,7 @@ const About = props => {
 About.propTypes = {
   fetchContributors: PropTypes.func.isRequired,
   contributors: PropTypes.array.isRequired,
-  loaded: PropTypes.bool.isRequired
+  loaded: PropTypes.bool.isRequired,
 };
 
 export default About;

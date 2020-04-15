@@ -14,7 +14,6 @@ import Login from './containers/Home';
 import About from './containers/About';
 
 import { GlobalStyle, MainContent } from './index.styles';
-
 import { Provider as ProviderWrapper } from 'rendition';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
@@ -25,8 +24,8 @@ const routes = (
     <MainContent>
       <ProviderWrapper>
         <App>
-          <Route exact path='/' component={Login} />
-          <Route path='/about' component={About} />
+          <Route exact path="/" component={Login} />
+          <Route path="/about" component={About} />
         </App>
       </ProviderWrapper>
     </MainContent>

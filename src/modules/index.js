@@ -4,7 +4,7 @@ import about from './about';
 
 const rootReducer = combineReducers({
   counter,
-  about
+  about,
 });
 
 export default rootReducer;

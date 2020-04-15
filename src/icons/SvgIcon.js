@@ -12,7 +12,7 @@ const SvgIcon = props => {
 
   return (
     <Svg
-      focusable='false'
+      focusable="false"
       viewBox={viewBox}
       aria-hidden={titleAccess ? 'false' : 'true'}
       role={titleAccess ? 'img' : 'presentation'}

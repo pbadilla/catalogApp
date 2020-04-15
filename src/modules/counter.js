@@ -9,7 +9,7 @@ const COUNTER_INCREMENT = 'counter/COUNTER_INCREMENT';
 export function increment(value = 1) {
   return {
     type: COUNTER_INCREMENT,
-    payload: value
+    payload: value,
   };
 }
 
@@ -22,7 +22,7 @@ export const getCounter = state => state.counter.counter;
 // Store & reducer
 
 const initialState = {
-  counter: 0
+  counter: 0,
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -30,7 +30,7 @@ export default function reducer(state = initialState, action = {}) {
     case COUNTER_INCREMENT:
       return {
         ...state,
-        counter: state.counter + action.payload
+        counter: state.counter + action.payload,
       };
     default:
       return state;

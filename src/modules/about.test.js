@@ -2,12 +2,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 const nock = require('nock');
 
-import reducer, {
-  fetchContributors,
-  getContributors,
-  contributorsLoaded,
-  testing
-} from './about';
+import reducer, { fetchContributors, getContributors, contributorsLoaded, testing } from './about';
 
 const mockStore = configureMockStore([thunk]);
 
@@ -21,8 +16,8 @@ test('fetch contributors with success', async () => {
       login: 'gvaldambrini',
       avatar_url: 'https://avatars3.githubusercontent.com/u/2461921?v=3',
       html_url: 'https://github.com/gvaldambrini',
-      contributions: 10
-    }
+      contributions: 10,
+    },
   ];
 
   const u = new URL(testing.repo_url);
@@ -55,7 +50,7 @@ test('fetch contributors with error', async () => {
 test('handle the fetchContributorsSuccess action', () => {
   const initialState = {
     contributors: [],
-    loaded: false
+    loaded: false,
   };
 
   const data = [
@@ -63,21 +58,18 @@ test('handle the fetchContributorsSuccess action', () => {
       login: 'gvaldambrini',
       avatar_url: 'https://avatars3.githubusercontent.com/u/2461921?v=3',
       html_url: 'https://github.com/gvaldambrini',
-      contributions: 10
-    }
+      contributions: 10,
+    },
   ];
 
-  const newState = reducer(
-    initialState,
-    testing.fetchContributorsSuccess(data)
-  );
+  const newState = reducer(initialState, testing.fetchContributorsSuccess(data));
   expect(newState.contributors).toEqual([
     {
       username: 'gvaldambrini',
       avatar: 'https://avatars3.githubusercontent.com/u/2461921?v=3',
       url: 'https://github.com/gvaldambrini',
-      contributions: 10
-    }
+      contributions: 10,
+    },
   ]);
   expect(newState.loaded).toEqual(true);
 });
@@ -85,13 +77,10 @@ test('handle the fetchContributorsSuccess action', () => {
 test('handle the fetchContributorsFailure action', () => {
   const initialState = {
     contributors: [],
-    loaded: false
+    loaded: false,
   };
 
-  const newState = reducer(
-    initialState,
-    testing.fetchContributorsFailure('Unable to fetch')
-  );
+  const newState = reducer(initialState, testing.fetchContributorsFailure('Unable to fetch'));
   expect(newState.contributors).toEqual([]);
   expect(newState.loaded).toEqual(true);
 });
@@ -109,21 +98,19 @@ test('get the contributors', () => {
         login: 'gvaldambrini',
         avatar_url: 'https://avatars3.githubusercontent.com/u/2461921?v=3',
         html_url: 'https://github.com/gvaldambrini',
-        contributions: 10
-      }
+        contributions: 10,
+      },
     ],
-    loaded: false
+    loaded: false,
   };
 
-  expect(getContributors({ about: aboutState })).toEqual(
-    aboutState.contributors
-  );
+  expect(getContributors({ about: aboutState })).toEqual(aboutState.contributors);
 });
 
 test('check if contributors are loaded', () => {
   const aboutState = {
     contributors: [],
-    loaded: true
+    loaded: true,
   };
 
   expect(contributorsLoaded({ about: aboutState })).toEqual(true);

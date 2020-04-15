@@ -5,6 +5,7 @@ import Login from '../../components/Login';
 
 import { Grid, GridCol } from 'griz';
 
+// eslint-disable-next-line no-unused-vars
 const Home = props => (
   <Grid responsiveLg>
     <GridCol>

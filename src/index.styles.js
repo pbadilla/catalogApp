@@ -2,12 +2,11 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 import catalogAppTheme from './styles/themes/catalogApp';
 
-const { fonts, colors } = catalogAppTheme;
+const { fonts } = catalogAppTheme;
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
 
-  // You can continue writing global styles here
   body {
     padding: 0;
     background-color: white;
@@ -37,25 +36,4 @@ export const MainContent = styled(ScrollView)`
     `
     background-color: ${props.bg};
   `}
-`;
-
-export const Slide = styled.section`
-  font-weight: 400;
-  flex: 1;
-  height: ${props => (props.height ? props.height : '100%')};
-  width: ${props => (props.width ? props.width : '100%')};
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  font-size: 3em;
-  color: ${colors.white};
-`;
-
-export const App = styled.div`
-  *,
-  & {
-    box-sizing: border-box;
-  }
 `;
