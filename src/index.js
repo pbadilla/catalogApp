@@ -10,6 +10,8 @@ import App from './pages/App';
 import Login from './pages/Login';
 import Home from './containers/Home';
 import Product from './pages/Product';
+import Lists from './pages/Lists';
+import Card from './pages/Card';
 
 import { ThemeProvider } from 'pcln-design-system';
 import { GlobalStyle, MainContent } from './index.styles';
@@ -25,6 +27,8 @@ const routes = (
           <Route exact path="/" component={Login} />
           <Route path="/home" component={Home} />
           <Route path="/product" component={Product} />
+          <Route path="/lists" component={Lists} />
+          <Route path="/card" component={Card} />
         </App>
       </MainContent>
     </ThemeProvider>

@@ -10,7 +10,7 @@ import { Flex, Box, Button, Container, Divider, Icon, Link, Relative } from 'pcl
 import { Grid, Cell } from 'styled-css-grid';
 
 // eslint-disable-next-line no-unused-vars
-const Product = props => {
+const Card = props => {
   const history = useHistory();
 
   function changeView(nameViewParam) {
@@ -31,12 +31,14 @@ const Product = props => {
 
   return (
     <div>
-      <Grid height="30px">
+      <Grid columns={8} rows={'minmax(auto, 30px)'}>
         <Cell width={1} height={1} middle>
           <Link href="#" onClick={returnBack}>
             <Icon name="ChevronLeft" size="35" />
           </Link>
-          <h2>Product</h2>
+        </Cell>
+        <Cell width={7} height={1} middle>
+          <h2>Card</h2>
         </Cell>
       </Grid>
 
@@ -53,7 +55,7 @@ const Product = props => {
             width="100%"
           >
             <Relative p={2}>
-              <Icon name="RadioPlus" size="20" />
+              <Icon name="Document" size="20" />
             </Relative>
             Añadir
           </Button>
@@ -78,7 +80,7 @@ const Product = props => {
           {' '}
           <Button radius={4} size="large" mr={2} color="primary" width="100%" disabled>
             <Relative p={2}>
-              <Icon name="List" size="20" />
+              <Icon name="Document" size="20" />
             </Relative>
             Listados
           </Button>
@@ -99,4 +101,4 @@ const Product = props => {
   );
 };
 
-export default Product;
+export default Card;
