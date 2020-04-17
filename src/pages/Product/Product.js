@@ -39,16 +39,14 @@ const Product = props => {
           <h2>Product</h2>
         </Cell>
       </Grid>
-
       <Divider borderColor="blue" />
-
-      <Grid columns={3} justifyContent="space-around">
+      <Grid columns={2} justifyContent="space-around">
         <Cell>
           <Button
             radius={4}
             size="large"
             mr={2}
-            color="primary"
+            color="secondary"
             onClick={() => changeView('addProduct')}
             width="100%"
           >
@@ -64,7 +62,7 @@ const Product = props => {
             radius={4}
             size="large"
             mr={2}
-            color="primary"
+            color="secondary"
             width="100%"
             onClick={() => changeView('viewCard')}
           >
@@ -75,8 +73,7 @@ const Product = props => {
           </Button>
         </Cell>
         <Cell>
-          {' '}
-          <Button radius={4} size="large" mr={2} color="primary" width="100%" disabled>
+          <Button radius={4} size="large" mr={2} color="secondary" width="100%" disabled>
             <Relative p={2}>
               <Icon name="List" size="20" />
             </Relative>
@@ -84,11 +81,14 @@ const Product = props => {
           </Button>
         </Cell>
       </Grid>
-      <Flex>
-        <Box width={1} p={0} mb={2} mt={2} color="white">
-          <Search />
-        </Box>
-      </Flex>
+      <Divider borderColor="blue" />
+      <Grid columns={1}>
+        <Cell>
+          <Box p={3}>
+            <Search />
+          </Box>
+        </Cell>
+      </Grid>
       <Divider borderColor="blue" />
       <Flex>
         <Container>

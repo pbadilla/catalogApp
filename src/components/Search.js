@@ -2,14 +2,19 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { FormField, Label, Icon, Input } from 'pcln-design-system';
+import { Button, FormField, Label, Icon, Input, Relative } from 'pcln-design-system';
 
 const SearchBox = () => (
-  <FormField>
-    <Label htmlFor="search">Search</Label>
+  <form name="form-search">
+    <Label htmlFor="search" hidden>
+      Search
+    </Label>
     <Icon name="Search" size="20" />
-    <Input id="search" name="search" defaultValue="" placeholder="Search Product" />
-  </FormField>
+    <Input id="search" name="search" defaultValue="" placeholder="Search Product" width="100%" />
+    <Button size="medium" mr={2} type="submit">
+      Buscar
+    </Button>
+  </form>
 );
 
 export default SearchBox;
