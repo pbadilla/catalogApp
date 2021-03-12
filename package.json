@@ -53,7 +53,7 @@
     "react": "^16.8.5",
     "react-app-polyfill": "^1.0.1",
     "react-autocomplete": "^1.8.1",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.8.5",
     "react-media": "^1.10.0",
     "react-redux": "^7.1.0",
