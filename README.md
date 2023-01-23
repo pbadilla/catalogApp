@@ -1,19 +1,30 @@
-[![Build Status](https://api.travis-ci.org/repositories/gvaldambrini/react-simple-boilerplate.svg)](https://travis-ci.org/gvaldambrini/react-simple-boilerplate)
+# catalogApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+app to manage stocks via mobile or any other device
 
-On the top of CRA, it adds:
- - sass & (S)CSS modules
- - redux & redux-thunk
- - react-router
- - prettier & eslint
- - a travis integration
- - Storybook
+## Technology
+
+- React
+- Express
+- MongoDB
+
+## Starter
+
+`Use Yarn or NPM to run your scripts`
+
+test => Run all tests from project <br/>
+dev => Run vite server in localhost <br/>
+build => Build the react project <br/>
+preview => Run the build projet into localhost <br/>
+
+## Screenshoots
+
+### Preview
+![Frontend](https://user-images.githubusercontent.com/55673235/205501257-b310130b-e253-40cc-bbee-f893ac52f2d5.png)
+
+<br/>
+
+### Testing
+![Backend](https://user-images.githubusercontent.com/55673235/205501529-20d88194-62dd-4a73-92e1-1f57096bb02f.png)
 
 
- The filesystem structure is the following:
- - src
-   - components, the "dumb" components
-   - containers, the redux HOC
-   - modules, the redux modules following the [ducks proposal](https://github.com/erikras/ducks-modular-redux)
- - scripts, with a simple cli to create the scaffoling for "dumb" components.
